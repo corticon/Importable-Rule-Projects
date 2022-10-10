@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="1" buildNumber="8017" updateStamp="_s0iccOxfEeq-FcVOCrBe0Q" externalChecksum="7824986:507989954:2146616488">
+  <languageCode>en_US</languageCode>
+  <ruleset operationMode="ProcessMultiRuleLogicalLoops" vocabularyUpdateStamp="_t02RsOuVEeq-FcVOCrBe0Q" vocabulary="../OrderData.ecore#/">
+    <rule>
+      <condition/>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="Order.supplyItem.description = 'Intermittent Clean Catheter'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Intermittent Clean Catheter'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.supplyItem.description" rhs="'Intermittent Clean Catheter'"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="Order.catheterCount+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.catheterCount = Order.catheterCount + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="Order.supplyItem.description = 'Intermittent Sterile Catheter'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Intermittent Sterile Catheter'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.supplyItem.description" rhs="'Intermittent Sterile Catheter'"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="Order.catheterCount+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.catheterCount = Order.catheterCount + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="Order.supplyItem.description = 'Intermittent Caudet Catheter'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Intermittent Caudet Catheter'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.supplyItem.description" rhs="'Intermittent Caudet Catheter'"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Order.catheterCount+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.catheterCount = Order.catheterCount + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.2">
+      <condition>
+        <opaqueExpression expression="Order.supplyItem.description = 'Indwelling Catheter (Balloon)'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Indwelling Catheter (Balloon)'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.supplyItem.description" rhs="'Indwelling Catheter (Balloon)'"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="Order.catheterCount+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.catheterCount = Order.catheterCount + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="Order.requireManualEntry = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.requireManualEntry = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="requireManualEntry" datatype="Boolean" termtype="ATTRIBUTE" fulltext="Order.requireManualEntry">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="Order.supplyItem.description = 'Indwelling Coudet Catheter'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Indwelling Coudet Catheter'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.supplyItem.description" rhs="'Indwelling Coudet Catheter'"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="Order.catheterCount+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.catheterCount = Order.catheterCount + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.5">
+      <condition>
+        <opaqueExpression expression="Order.supplyItem.description = 'External Male Catheter'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'External Male Catheter'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.supplyItem.description" rhs="'External Male Catheter'"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="Order.catheterCount+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.catheterCount = Order.catheterCount + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Order.requireMaleCatheterSupplies = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.requireMaleCatheterSupplies = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="requireMaleCatheterSupplies" datatype="Boolean" termtype="ATTRIBUTE" fulltext="Order.requireMaleCatheterSupplies">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="Order.supplyItem.description = 'Lubricant'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Lubricant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.supplyItem.description" rhs="'Lubricant'"/>
+      </condition>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition>
+        <opaqueExpression expression="Order.supplyItem.description = 'Bedside Drainage Collection Bag'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Bedside Drainage Collection Bag'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.supplyItem.description" rhs="'Bedside Drainage Collection Bag'"/>
+      </condition>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Order.bagTypeCount+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.bagTypeCount = Order.bagTypeCount + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="bagTypeCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.bagTypeCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="bagTypeCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.bagTypeCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition>
+        <opaqueExpression expression="Order.supplyItem.description = 'Leg Bag'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Leg Bag'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.supplyItem.description" rhs="'Leg Bag'"/>
+      </condition>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Order.bagTypeCount+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.bagTypeCount = Order.bagTypeCount + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="bagTypeCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.bagTypeCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="bagTypeCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.bagTypeCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="Order.supplyItem.description = 'Catheter Insertion Tray'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Catheter Insertion Tray'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.supplyItem.description" rhs="'Catheter Insertion Tray'"/>
+      </condition>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="Order.supplyItem.description = 'Bedside Drainage Bottle'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Bedside Drainage Bottle'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.supplyItem.description" rhs="'Bedside Drainage Bottle'"/>
+      </condition>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="Order.supplyItem.description = 'Extension Tubing'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Extension Tubing'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.supplyItem.description" rhs="'Extension Tubing'"/>
+      </condition>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="Order.supplyItem.description = 'Leg Strap'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Leg Strap'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.supplyItem.description" rhs="'Leg Strap'"/>
+      </condition>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="Order.catheterCount > 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.catheterCount > 1" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.catheterCount" rhs="> 1"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="Order.validationFlagCount+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.validationFlagCount = Order.validationFlagCount + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="validationFlagCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.validationFlagCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="validationFlagCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.validationFlagCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <condition/>
+      <condition>
+        <opaqueExpression expression="Order.bagTypeCount > 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.bagTypeCount > 1" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="bagTypeCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.bagTypeCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Order.bagTypeCount" rhs="> 1"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="Order.validationFlagCount+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.validationFlagCount = Order.validationFlagCount + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="validationFlagCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.validationFlagCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="validationFlagCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.validationFlagCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1 #//@ruleset/@rules.2 #//@ruleset/@rules.3 #//@ruleset/@rules.4 #//@ruleset/@rules.5 #//@ruleset/@rules.6" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+      <text expression="Categorize {Order.supplyItem.description} as Catheter">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Categorize  + Order_supplyItem.description +  as Catheter" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+              <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.8 #//@ruleset/@rules.9" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+      <text expression="Categorize {Order.supplyItem.description} as 1 type of bag">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Categorize  + Order_supplyItem.description +  as 1 type of bag" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+              <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.4" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+      <text expression="If Catheter Balloon selected, then HCPCS code must be manually entered.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If Catheter Balloon selected, then HCPCS code must be manually entered." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.14" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="The Catheter selections are mutually exclusive (first 6 rows).  If one is checked, none of the others may be checked.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The Catheter selections are mutually exclusive (first 6 rows).  If one is checked, none of the others may be checked." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.15" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Only one collection bag type (bed or leg) may be ordered.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Only one collection bag type (bed or leg) may be ordered." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.6" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+      <text expression="If external Male Catheter is selected, then additional supplies apply.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If external Male Catheter is selected, then additional supplies apply." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="../OrderData.ecore#//Order" ruleStatements="#//@ruleset/@ruleStatements.3 #//@ruleset/@ruleStatements.4">
+      <extension association="true" entity="../OrderData.ecore#//SupplyItem" traversedAssocRole="../OrderData.ecore#//Order/supplyItem" ruleStatements="#//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.5">
+        <referencedAttributes attribute="../OrderData.ecore#//SupplyItem/description"/>
+      </extension>
+      <referencedAttributes attribute="../OrderData.ecore#//Order/validationFlagCount"/>
+      <referencedAttributes attribute="../OrderData.ecore#//Order/catheterCount"/>
+      <referencedAttributes attribute="../OrderData.ecore#//Order/bagTypeCount"/>
+      <referencedAttributes attribute="../OrderData.ecore#//Order/requireManualEntry"/>
+      <referencedAttributes attribute="../OrderData.ecore#//Order/requireMaleCatheterSupplies"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" sashWeightConditionsIf="18">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <naturalLanguageText value="Increment the 'validation flag' by 1"/>
+        <valueSetCell/>
+        <expressionCell external="Order.validationFlagCount+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.validationFlagCount = Order.validationFlagCount + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="validationFlagCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.validationFlagCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="validationFlagCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.validationFlagCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <naturalLanguageText value="Increment the 'catheter count' by 1 unit"/>
+        <valueSetCell/>
+        <expressionCell external="Order.catheterCount+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.catheterCount = Order.catheterCount + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <naturalLanguageText value="Increment the 'bag type count' by 1 unit"/>
+        <valueSetCell/>
+        <expressionCell external="Order.bagTypeCount+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.bagTypeCount = Order.bagTypeCount + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="bagTypeCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.bagTypeCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="bagTypeCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.bagTypeCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <naturalLanguageText value="This item requires manual HCPCS entry"/>
+        <valueSetCell/>
+        <expressionCell external="Order.requireManualEntry">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.requireManualEntry" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="requireManualEntry" datatype="Boolean" termtype="ATTRIBUTE" fulltext="Order.requireManualEntry">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <naturalLanguageText value="This item requires associated items to be ordered along with it."/>
+        <valueSetCell/>
+        <expressionCell external="Order.requireMaleCatheterSupplies">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.requireMaleCatheterSupplies" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="requireMaleCatheterSupplies" datatype="Boolean" termtype="ATTRIBUTE" fulltext="Order.requireMaleCatheterSupplies">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.3"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.4"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1:6"/>
+        <text external="Categorize {Order.supplyItem.description} as Catheter">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Categorize  + Order_supplyItem.description +  as Catheter" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="16" ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="{8, 9}"/>
+        <text external="Categorize {Order.supplyItem.description} as 1 type of bag">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Categorize  + Order_supplyItem.description +  as 1 type of bag" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="4"/>
+        <text external="If Catheter Balloon selected, then HCPCS code must be manually entered.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If Catheter Balloon selected, then HCPCS code must be manually entered." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="41" ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference external="14"/>
+        <text external="The Catheter selections are mutually exclusive (first 6 rows).  If one is checked, none of the others may be checked.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The Catheter selections are mutually exclusive (first 6 rows).  If one is checked, none of the others may be checked." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.4">
+        <reference external="15"/>
+        <text external="Only one collection bag type (bed or leg) may be ordered.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Only one collection bag type (bed or leg) may be ordered." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.5">
+        <reference external="6"/>
+        <text external="If external Male Catheter is selected, then additional supplies apply.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If external Male Catheter is selected, then additional supplies apply." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="51" columnWidthFactor="0.5">
+      <conditionItemList rowHeight="65">
+        <naturalLanguageText value="For the item description of"/>
+        <valueSetCell/>
+        <expressionCell external="Order.supplyItem.description">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <naturalLanguageText value="Increment the 'bag type count' by 1 unit"/>
+        <valueSetCell/>
+        <expressionCell external="Order.bagTypeCount">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.bagTypeCount" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="bagTypeCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.bagTypeCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <naturalLanguageText value="Increment the 'catheter count' by 1 unit"/>
+        <valueSetCell/>
+        <expressionCell external="Order.catheterCount">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.catheterCount" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="53" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList/>
+        <conditionValueSetCellList/>
+        <conditionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="'Intermittent Clean Catheter'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Intermittent Clean Catheter'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="'Intermittent Sterile Catheter'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Intermittent Sterile Catheter'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="'Intermittent Caudet Catheter'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Intermittent Caudet Catheter'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="'Indwelling Catheter (Balloon)'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Indwelling Catheter (Balloon)'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.requireManualEntry = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="requireManualEntry" datatype="Boolean" termtype="ATTRIBUTE" fulltext="Order.requireManualEntry">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="5" columnWidth="100" pRule="#//@ruleset/@rules.5">
+        <conditionValueSetCellList valueSet="'Indwelling Coudet Catheter'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Indwelling Coudet Catheter'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="6" columnWidth="100" pRule="#//@ruleset/@rules.6">
+        <conditionValueSetCellList valueSet="'External Male Catheter'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'External Male Catheter'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.requireMaleCatheterSupplies = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="requireMaleCatheterSupplies" datatype="Boolean" termtype="ATTRIBUTE" fulltext="Order.requireMaleCatheterSupplies">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Order" datatype="Order" termtype="ENTITY" fulltext="Order"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="7" columnWidth="100" pRule="#//@ruleset/@rules.7">
+        <conditionValueSetCellList valueSet="'Lubricant'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Lubricant'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="8" columnWidth="100" pRule="#//@ruleset/@rules.8">
+        <conditionValueSetCellList valueSet="'Bedside Drainage Collection Bag'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Bedside Drainage Collection Bag'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="9" columnWidth="100" pRule="#//@ruleset/@rules.9">
+        <conditionValueSetCellList valueSet="'Leg Bag'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Leg Bag'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="10" columnWidth="100" pRule="#//@ruleset/@rules.10">
+        <conditionValueSetCellList valueSet="'Catheter Insertion Tray'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Catheter Insertion Tray'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="11" columnWidth="100" pRule="#//@ruleset/@rules.11">
+        <conditionValueSetCellList valueSet="'Bedside Drainage Bottle'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Bedside Drainage Bottle'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="12" columnWidth="100" pRule="#//@ruleset/@rules.12">
+        <conditionValueSetCellList valueSet="'Extension Tubing'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Extension Tubing'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="13" columnWidth="100" pRule="#//@ruleset/@rules.13">
+        <conditionValueSetCellList valueSet="'Leg Strap'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.supplyItem.description = 'Leg Strap'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="description" datatype="String" termtype="ATTRIBUTE" fulltext="Order.supplyItem.description">
+                <parentTerm text="supplyItem" datatype="SupplyItem" termtype="ENTITY" fulltext="Order.supplyItem">
+                  <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="14" columnWidth="100" pRule="#//@ruleset/@rules.14">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="> 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.catheterCount > 1" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="catheterCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.catheterCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="15" columnWidth="100" pRule="#//@ruleset/@rules.15">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="> 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.bagTypeCount > 1" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="bagTypeCount" datatype="Integer" termtype="ATTRIBUTE" fulltext="Order.bagTypeCount">
+                <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

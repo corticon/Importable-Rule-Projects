@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="6" minorVersionNumber="3" minorServiceNumber="3" buildNumber="8020" updateStamp="_G2ppEEicEe2HwcyNmCWtJA" externalChecksum="2722078124:507989954:3318206248" studioType="Java" rulesheetAssets="Medicare%20Allowable%20Quantities.ers#/ BCBS%20Allowable%20Quantities.ers#/ Intialization.ers#/ Item%20Categorization.ers#/">
+  <ruleflow versionLabel="Urological Rules" majorVersion="1" vocabularyUpdateStamp="_G1cvMUicEe2HwcyNmCWtJA" vocabulary="../OrderData.ecore#/">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Payer Allowables" order="3" ruleActivityUpdateStamp="_zuVGYXIEEeuE09wzt5E5cw" invokes="#//@ruleflow/@flowControlList.0">
+      <condition expression="Order.payerName">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Order.payerName" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+          <referencedTermList>
+            <terms text="payerName" datatype="String" termtype="ATTRIBUTE" fulltext="Order.payerName">
+              <parentTerm text="Order" datatype="Order" termtype="ENTITY" fulltext="Order"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </condition>
+      <branches>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Medicare Allowable Quantities" order="4" ruleActivityUpdateStamp="_QjWNUkibEe2HwcyNmCWtJA" invokes="Medicare%20Allowable%20Quantities.ers#//@ruleset"/>
+        <label expression="'Medicare'"/>
+        <viewExpressions lhs="Order.payerName" rhs="'Medicare'"/>
+      </branches>
+      <branches>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="BCBS Allowable Quantities" order="5" ruleActivityUpdateStamp="_QV3K8kibEe2HwcyNmCWtJA" invokes="BCBS%20Allowable%20Quantities.ers#//@ruleset"/>
+        <label expression="'Blue Cross Blue Shield'"/>
+        <viewExpressions lhs="Order.payerName" rhs="'Blue Cross Blue Shield'"/>
+      </branches>
+    </flowControlList>
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Intialization" order="1" ruleActivityUpdateStamp="_QsE-9Eb3Eey4G7FeQV2Gwg" nextStep="#//@ruleflow/@flowControlList.2" invokes="Intialization.ers#//@ruleset"/>
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Item Categorization" order="2" ruleActivityUpdateStamp="_QvoV10ibEe2HwcyNmCWtJA" nextStep="#//@ruleflow/@flowControlList.0" invokes="Item%20Categorization.ers#//@ruleset"/>
+  </ruleflow>
+  <ruleflowViewList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:FlowDiagram">
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:BranchContainerShape" x="360" y="168" width="493" height="217" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.1" activityNode="#//@ruleflow/@flowControlList.0" valid="true" branchContainer="#//@ruleflow/@flowControlList.0">
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="91" y="17" width="314" height="55" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.0" activityNode="#//@ruleflow/@flowControlList.0/@branches.0/@nextStep.0"/>
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="187" y="79" width="216" height="71" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.0/@branchEdgeList.1" activityNode="#//@ruleflow/@flowControlList.0/@branches.1/@nextStep.0"/>
+      <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.0" branch="#//@ruleflow/@flowControlList.0/@branches.0"/>
+      <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.0/@flowShapeList.1" branch="#//@ruleflow/@flowControlList.0/@branches.1"/>
+    </flowShapeList>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="130" y="120" width="159" height="70" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.0" activityNode="#//@ruleflow/@flowControlList.1"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="144" y="223" width="177" height="66" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.1" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.0" activityNode="#//@ruleflow/@flowControlList.2"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.1" targetShape="#//@ruleflowViewList.0/@flowShapeList.2"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.2" targetShape="#//@ruleflowViewList.0/@flowShapeList.0"/>
+  </ruleflowViewList>
+</com.corticon.rulesemf.assetmodel:RuleflowAsset>

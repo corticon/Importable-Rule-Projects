@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_dAtscuxhEeq-FcVOCrBe0Q" externalChecksum="7824986:507989954">
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" buildNumber="8017" updateStamp="_5hQiMQ2GEeu0oZKxSV_esQ" externalChecksum="7824986:507989954">
+    <testsheet remoteServerUri="http://localhost:8850/axis" decisionServiceName="Detailed Written Urological Supply Order" majorVersion="1" minorVersion="0" username="admin" password="admin" locale="">
+      <input/>
+      <output>
+        <PostedMessage severity="Info" text="[Intialization,2] If external Male Catheter is selected, then additional supplies apply."/>
+        <PostedMessage severity="Violation" text="[Intialization,1] Every form must have at least one diagnostic code."/>
+        <PostedMessage severity="Info" text="[Item_Categorization,8] Categorize Bedside Drainage Collection Bag as 1 type of bag"/>
+        <PostedMessage severity="Info" text="[Item_Categorization,9] Categorize Leg Bag as 1 type of bag"/>
+        <PostedMessage severity="Violation" text="[Item_Categorization,15] Only one collection bag type (bed or leg) may be ordered."/>
+        <PostedMessage severity="Info" text="[Item_Categorization,1] Categorize Intermittent Clean Catheter as Catheter"/>
+        <PostedMessage severity="Info" text="[Item_Categorization,2] Categorize Intermittent Sterile Catheter as Catheter"/>
+        <PostedMessage severity="Info" text="[Item_Categorization,3] Categorize Intermittent Caudet Catheter as Catheter"/>
+        <PostedMessage severity="Info" text="[Item_Categorization,4] Categorize Indwelling Catheter (Balloon) as Catheter"/>
+        <PostedMessage severity="Warning" text="[Item_Categorization,4] If Catheter Balloon selected, then HCPCS code must be manually entered."/>
+        <PostedMessage severity="Info" text="[Item_Categorization,6] Categorize External Male Catheter as Catheter"/>
+        <PostedMessage severity="Info" text="[Item_Categorization,6] If external Male Catheter is selected, then additional supplies apply."/>
+        <PostedMessage severity="Violation" text="[Item_Categorization,14] The Catheter selections are mutually exclusive (first 6 rows).  If one is checked, none of the others may be checked."/>
+        <PostedMessage severity="Info" text="[BCBS_Allowable_Quantities,1] BCBS's max MCR allowable for Intermittent Clean Catheter is 200 monthly. The HCPCS code for Intermittent Clean Catheter is A4351 and has a monthly allowable quantity of 200."/>
+        <PostedMessage severity="Info" text="[BCBS_Allowable_Quantities,3] BCBS's max MCR allowable for Intermittent Caudet Catheter is 200 monthly. The HCPCS code for Intermittent Caudet Catheter is A4352 and has a monthly allowable quantity of 200."/>
+        <PostedMessage severity="Info" text="[BCBS_Allowable_Quantities,4] BCBS's max MCR allowable for Indwelling Catheter (Balloon) is 2 monthly. The HCPCS code for Indwelling Catheter (Balloon) is MANUAL ENTRY REQUIRED and has a monthly allowable quantity of 1."/>
+        <PostedMessage severity="Info" text="[BCBS_Allowable_Quantities,10] BCBS's max MCR allowable for Catheter Insertion Tray is 1 monthly. The HCPCS code for Catheter Insertion Tray is MANUAL ENTRY REQUIRED and has a monthly allowable quantity of 2."/>
+        <PostedMessage severity="Info" text="[BCBS_Allowable_Quantities,13] BCBS's max MCR allowable for Leg Strap is 1 monthly. The HCPCS code for Leg Strap is A4334 and has a monthly allowable quantity of 1."/>
+        <PostedMessage severity="Info" text="[Medicare_Allowable_Quantities,2] Medicare's max MCR allowable for Intermittent Sterile Catheter is 200 monthly. The HCPCS code for Intermittent Sterile Catheter is A4353 and has a monthly allowable quantity of 200."/>
+        <PostedMessage severity="Info" text="[Medicare_Allowable_Quantities,6] Medicare's max MCR allowable for External Male Catheter is 35 monthly. The HCPCS code for External Male Catheter is A4349 and has a monthly allowable quantity of 35."/>
+        <PostedMessage severity="Info" text="[Medicare_Allowable_Quantities,8] Medicare's max MCR allowable for Bedside Drainage Collection Bag is 2 monthly. The HCPCS code for Bedside Drainage Collection Bag is A4357 and has a monthly allowable quantity of 2."/>
+        <PostedMessage severity="Info" text="[Medicare_Allowable_Quantities,9] Medicare's max MCR allowable for Leg Bag is 2 monthly. The HCPCS code for Leg Bag is A4358 and has a monthly allowable quantity of 2."/>
+      </output>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="OrderData.ecore#//Order">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Medicare" eAttribute="OrderData.ecore#//Order/payerName"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Intermittent Sterile Catheter" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="R339, C679" eAttribute="OrderData.ecore#//Order/diagnosisCodes"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="OrderData.ecore#//Order">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Blue Cross Blue Shield" eAttribute="OrderData.ecore#//Order/payerName"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Indwelling Catheter (Balloon)" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="N310, N328" eAttribute="OrderData.ecore#//Order/diagnosisCodes"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Leg Strap" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" expanded="false" eClass="OrderData.ecore#//Order">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Blue Cross Blue Shield" eAttribute="OrderData.ecore#//Order/payerName"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Catheter Insertion Tray" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="OrderData.ecore#//Order/diagnosisCodes"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Intermittent Caudet Catheter" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Intermittent Clean Catheter" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="4" manuallyCreated="true" expanded="false" eClass="OrderData.ecore#//Order">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="External Male Catheter" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Bedside Drainage Collection Bag" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Medicare" eAttribute="OrderData.ecore#//Order/payerName"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="c679, n310" eAttribute="OrderData.ecore#//Order/diagnosisCodes"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="9" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Leg Bag" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+          </children>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true" passed="false">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" passed="false" eClass="OrderData.ecore#//Order">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="R339, C679" eAttribute="OrderData.ecore#//Order/diagnosisCodes"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0" eAttribute="OrderData.ecore#//Order/bagTypeCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" passed="false" value="0" eAttribute="OrderData.ecore#//Order/validationFlagCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Medicare" eAttribute="OrderData.ecore#//Order/payerName"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" newOrModified="true" passed="false" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.6 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.18" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" passed="false" value="A4353" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Intermittent Sterile Catheter" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="200" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="200" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" passed="false" value="1" eAttribute="OrderData.ecore#//Order/catheterCount"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" newOrModified="true" eClass="OrderData.ecore#//Order">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="N310, N328" eAttribute="OrderData.ecore#//Order/diagnosisCodes"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0" eAttribute="OrderData.ecore#//Order/bagTypeCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0" eAttribute="OrderData.ecore#//Order/validationFlagCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="true" eAttribute="OrderData.ecore#//Order/requireManualEntry"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Blue Cross Blue Shield" eAttribute="OrderData.ecore#//Order/payerName"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.8 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.9 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.15" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="MANUAL ENTRY REQUIRED" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Indwelling Catheter (Balloon)" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.17" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="A4334" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Leg Strap" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="OrderData.ecore#//Order/catheterCount"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" newOrModified="true" expanded="false" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.1 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.12" eClass="OrderData.ecore#//Order">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="OrderData.ecore#//Order/diagnosisCodes"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0" eAttribute="OrderData.ecore#//Order/bagTypeCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="OrderData.ecore#//Order/validationFlagCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Blue Cross Blue Shield" eAttribute="OrderData.ecore#//Order/payerName"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.16" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="MANUAL ENTRY REQUIRED" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Catheter Insertion Tray" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.7 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.14" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="A4352" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Intermittent Caudet Catheter" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="200" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="200" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.5 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.13" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="A4351" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Intermittent Clean Catheter" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="200" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="200" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="OrderData.ecore#//Order/catheterCount"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="4" newOrModified="true" expanded="false" passed="false" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.0 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.4" eClass="OrderData.ecore#//Order">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="c679, n310" eAttribute="OrderData.ecore#//Order/diagnosisCodes"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="OrderData.ecore#//Order/bagTypeCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="OrderData.ecore#//Order/validationFlagCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Medicare" eAttribute="OrderData.ecore#//Order/payerName"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="true" eAttribute="OrderData.ecore#//Order/requireMaleCatheterSupplies"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" newOrModified="true" passed="false" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.10 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.11 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.19" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="A4349" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="External Male Catheter" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" passed="false" value="35" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="35" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" passed="false" value="daily" eAttribute="OrderData.ecore#//SupplyItem/frequency"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.2 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.20" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="A4357" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Bedside Drainage Collection Bag" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="9" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.3 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.21" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="A4358" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Leg Bag" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" passed="false" value="1" eAttribute="OrderData.ecore#//Order/catheterCount"/>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600">
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.0" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.3"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.1" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.2"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.2" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.3/@children.6"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.3" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.3/@children.7"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.4" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.3"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.5" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.2/@children.6"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.6" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.4"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.7" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.2/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.8" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.1/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.9" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.1/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.10" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.3/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.11" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.3/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.12" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.2"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.13" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.2/@children.6"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.14" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.2/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.15" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.1/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.16" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.2/@children.4"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.17" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.1/@children.6"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.18" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.4"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.19" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.3/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.20" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.3/@children.6"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.21" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.3/@children.7"/>
+      </outputMessageSection>
+      <expectedRoot passed="false">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" expanded="false" passed="false" eClass="OrderData.ecore#//Order">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="R339, C679" eAttribute="OrderData.ecore#//Order/diagnosisCodes"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="OrderData.ecore#//Order/bagTypeCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" passed="false" value="2" eAttribute="OrderData.ecore#//Order/validationFlagCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Medicare" eAttribute="OrderData.ecore#//Order/payerName"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" expanded="false" passed="false" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" passed="false" value="A4322" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Intermittent Sterile Catheter" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="200" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="200" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" passed="false" value="4" eAttribute="OrderData.ecore#//Order/catheterCount"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" expanded="false" eClass="OrderData.ecore#//Order">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="N310, N328" eAttribute="OrderData.ecore#//Order/diagnosisCodes"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="OrderData.ecore#//Order/bagTypeCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="OrderData.ecore#//Order/validationFlagCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="true" eAttribute="OrderData.ecore#//Order/requireManualEntry"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Blue Cross Blue Shield" eAttribute="OrderData.ecore#//Order/payerName"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="MANUAL ENTRY REQUIRED" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Indwelling Catheter (Balloon)" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A4334" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Leg Strap" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="OrderData.ecore#//Order/catheterCount"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="OrderData.ecore#//Order">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="OrderData.ecore#//Order/diagnosisCodes"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="OrderData.ecore#//Order/bagTypeCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="OrderData.ecore#//Order/validationFlagCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Blue Cross Blue Shield" eAttribute="OrderData.ecore#//Order/payerName"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="MANUAL ENTRY REQUIRED" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Catheter Insertion Tray" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A4352" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Intermittent Caudet Catheter" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="200" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="200" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A4351" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Intermittent Clean Catheter" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="200" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="200" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="OrderData.ecore#//Order/catheterCount"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="4" manuallyCreated="true" passed="false" eClass="OrderData.ecore#//Order">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="c679, n310" eAttribute="OrderData.ecore#//Order/diagnosisCodes"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="OrderData.ecore#//Order/bagTypeCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="OrderData.ecore#//Order/validationFlagCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Medicare" eAttribute="OrderData.ecore#//Order/payerName"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="true" eAttribute="OrderData.ecore#//Order/requireMaleCatheterSupplies"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" manuallyCreated="true" passed="false" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A4349" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="External Male Catheter" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" passed="false" value="30" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="35" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" passed="false" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/frequency"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A4357" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Bedside Drainage Collection Bag" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="9" manuallyCreated="true" eReference="OrderData.ecore#//Order/supplyItem" eClass="OrderData.ecore#//SupplyItem">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A4358" eAttribute="OrderData.ecore#//SupplyItem/HCPCS"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="monthly" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableUnit"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Leg Bag" eAttribute="OrderData.ecore#//SupplyItem/description"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="OrderData.ecore#//SupplyItem/quantityAllowedPerMonth"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="OrderData.ecore#//SupplyItem/maxAllowableMCR"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" passed="false" value="2" eAttribute="OrderData.ecore#//Order/catheterCount"/>
+        </children>
+      </expectedRoot>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <ruletest vocabularyUpdateStamp="_Tkv2YexjEeq-FcVOCrBe0Q" testsheets="#//@testsheetAssets.0/@testsheet" vocabulary="OrderData.ecore#/"/>
+  <ruletestViewList xsi:type="com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder:TestTabFolder">
+    <testTabList name="untitled_1"/>
+  </ruletestViewList>
+</com.corticon.rulesemf.assetmodel:RuletestAsset>
