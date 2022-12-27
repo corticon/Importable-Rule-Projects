@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" minorServiceNumber="3" buildNumber="8020" updateStamp="_k28QN0igEe2o6uvU8j8F7w" externalChecksum="2722078124:507989954:3318206248" studioType="Java">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.common="http:///com/corticon/rulesemf/common.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="1" minorVersionNumber="4" minorServiceNumber="1" buildNumber="8020" updateStamp="_X5QSd4V5Ee2JItMKwQMEqQ" externalChecksum="2722078124:507989954:2146616488" studioType="Javascript">
   <languageCode>en_US</languageCode>
-  <ruleset vocabularyUpdateStamp="_ZOniEEigEe2o6uvU8j8F7w" vocabulary="Simulation.ecore#/">
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_X5QSdoV5Ee2JItMKwQMEqQ" key="10" type="Validation" severity="Error" invalidObjects="#//@rulesheetViewList.0/@ruleStatementSection/@ruleStatementItemList.3/@reference" textKey="RulesheetTableModelAPIImpl.Validation.RuleStatementOutOfContext"/>
+  <ruleset vocabularyUpdateStamp="_TczVRIV5Ee2JItMKwQMEqQ" vocabulary="Simulation.ecore#/">
     <rule>
       <condition/>
     </rule>
@@ -310,7 +311,7 @@
         </text>
       </ruleStatementItemList>
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
-        <reference external="4"/>
+        <reference validationMessages="#//@validationMessages.0" tooltip="Rule Statements references entities out of the rule's context: RULE BEHAVIOR MODIFIED" external="4"/>
         <text external="Invalid existing customer code {card.existingCustomer} - must be N, Y, P. Defaulting to 10 giving {Scorecard.score}">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Invalid existing customer code  + card.existingCustomer +  - must be N, Y, P. Defaulting to 10 giving  + Scorecard.score" expressiontype="BRSTATEMENT">
             <referencedTermList>
